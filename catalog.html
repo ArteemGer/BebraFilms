@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style2.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="logo">
+					<img src="/img/logo.png" alt="1" class="header__logo"/>
+					<p>BebraFilms</p>
+				</div>
+				<div class="btns">
+					<a href="Home.html"><button class="buttons">HOME</button></a>
+					<a href="catalog.html"><button class="buttons">CATALOG</button></a>
+				</div>
+			</header>
+			<main>
+				<h1>Catalog</h1>
+				<form id="filter" class="main_filter">
+                    <select name="year" id="year" class="filter">
+                        <option selected>2022</option>
+                        <option>2020</option>
+                        <option>2019</option>
+                        <option>2011</option>
+                        <option>2010</option>
+                        <option>2009</option>
+                        <option>2001</option>
+                        <option>1999</option>
+                        <option>1994</option>
+                    </select>
+                    <select name="genre" id="genre" class="filter">
+                        <option selected>action</option>
+                        <option>drama</option>
+                        <option>fantasy</option>
+                        <option>adventure</option>
+                        <option>thriller</option>
+                    </select>
+                    <select name="raiting" id="raiting" class="filter">
+                        <option selected>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <select name="age" id="age" class="filter">
+                        <option selected>0+</option>
+                        <option>6+</option>
+                        <option>12+</option>
+                        <option>16+</option>
+                        <option>18+</option>
+                    </select>
+                    <button onclick="reset()" value="reset" type="reset" form="filter" class="aboba">Reset</button>
+                </form>
+                <div class="catalog"></div>
+			</main>
+		</div>
+		<script src="scripts.js"></script>
+	</body>
+</html>
