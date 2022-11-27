@@ -276,3 +276,4 @@ button.addEventListener("click", () => {
 		catalog.innerHTML += value.template;
 	});
 });
+
