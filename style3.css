@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+header {
+    background-color: rgb(32, 32, 32);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 5px solid rgb(216, 216, 216);
+}
+.header__logo{
+    height: 40px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: rgb(216, 216, 216);
+}
+header p{
+    font-family: Roboto;
+    font-size: 30px;
+    margin-left: 30px;
+}
+.buttons{
+    font-size: 20px;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(216, 216, 216);
+    border: 2px solid rgb(216, 216, 216);
+    margin-right: 30px;
+}
+.btns{
+    display: flex;
+    align-items: center;
+}
+.buttons:hover{
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    transition: border 0.2s;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(80, 80, 80);
+    height: 1200px;
+}
+
+main p,h3{
+    color: rgb(216, 216, 216);
+}
+main h1{
+    font-family: 'Roboto';
+    font-size: 70px;
+    color: rgb(216, 216, 216);
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 5px rgb(216, 216, 216) solid;
+}
+footer {
+    background-color: rgb(32, 32, 32);
+    height: 70px;
+}
+a{
+    text-decoration: none;
+}
+footer{
+    border-top: 4px solid rgb(216, 216, 216);
+    display: flex;
+    justify-content: center;
+}
+footer a{
+font-family: "Roboto";
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(216, 216, 216);
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1400px;
+}
+.footer_one{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.film{
+    padding: 65px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 15px;
+    width: 1200px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: left;
+}
+.film_card img{
+    border-radius: 15px;
+}
+.film_about{
+    margin-left: 50px;
+    font-size: 30px;
+}
+.text{
+    margin-top: 10px;
+    font-family: 'Roboto';
+}
+.disc{
+    font-family: 'Roboto';
+    margin-top: 30px;
+    font-size: 20px;
+}
+.trailer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+.trailer h1{
+    margin-bottom: 30px;
+}
+video{
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 49px 10px rgb(216, 216, 216);
+    -moz-box-shadow: 0px 0px 49px 10px rgb(216, 216, 216);
+    box-shadow: 0px 0px 49px 10px rgb(216, 216, 216);
+}
