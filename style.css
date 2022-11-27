@@ -255,3 +255,25 @@ video{
 a{
     text-decoration: none;
 }
+footer{
+    border-top: 4px solid rgb(216, 216, 216);
+    display: flex;
+    justify-content: center;
+}
+footer a{
+font-family: "Roboto";
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(216, 216, 216);
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1400px;
+}
+.footer_one{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
