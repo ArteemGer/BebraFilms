@@ -13,6 +13,7 @@ let movies = [
 		additImages1:"/img/addit/1.1.jpg",
 		additImages2:"/img/addit/1.2.webp",
 		additImages3:"/img/addit/1.3.png",
+		link: "film1.html"
 	},
 	{
 		image: "/img/3.jpg",
@@ -27,6 +28,7 @@ let movies = [
 		additImages1:"/img/addit/3.1.jpg",
 		additImages2:"/img/addit/3.2.webp",
 		additImages3:"/img/addit/3.3.webp",
+		link: "film3.html"
 	},
 	{
 		image: "/img/6.webp",
@@ -41,6 +43,7 @@ let movies = [
 		additImages1:"/img/addit/6.1.jpg",
 		additImages2:"/img/addit/6.2.jpg",
 		additImages3:"/img/addit/6.3.webp",
+		link: "film6.html"
     },
 	{
 		image: "/img/7.jpg",
@@ -55,6 +58,7 @@ let movies = [
 		additImages1:"/img/addit/7.1.jpg",
 		additImages2:"/img/addit/7.2.avif",
 		additImages3:"/img/addit/7.3.jpg",
+		link: "film7.html"
     },
 	{
 		image: "/img/9.jpg",
@@ -69,6 +73,7 @@ let movies = [
 		additImages1:"/img/addit/9.1.jpg",
 		additImages2:"/img/addit/9.2.jpg",
 		additImages3:"/img/addit/9.3.jpg",
+		link: "film9.html"
     },
 	{
 		image: "/img/10.webp",
@@ -83,13 +88,14 @@ let movies = [
 		additImages1:"/img/addit/10.1.jpg",
 		additImages2:"/img/addit/10.2.jpg",
 		additImages3:"/img/addit/10.3.jpg",
+		link: "film10.html"
     },
 ];
 function cardtemplates() {
 	let a = [];
 	movies.forEach((element) => {
 		a.push({
-			template:`<a href="film.html"><div class="catalog__elem" id="1">
+			template:`<a href="${element.link}"><div class="catalog__elem" id="1">
 			<div class="header__elem">
 				<h3>${element.name}</h3>
 				<img src="${element.image}" alt="${element.name}">
@@ -109,6 +115,7 @@ function cardtemplates() {
 			additImages1: element.additImages1,
 			additImages2: element.additImages2,
 			additImages3: element.additImages3,
+			link: element.link
 		});
 	});
 	let a1 = a.slice(0,5)
