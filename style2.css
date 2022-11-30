@@ -284,4 +284,18 @@ font-family: "Roboto";
     justify-content: space-between;
 }
 
+.search{
+    margin: 20px 0;
+    max-width: 800px;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    outline: none;
+    font-size: 20px;
+    background-color: rgb(53, 53, 53);
+    color: rgb(216, 216, 216);
+}
 
+.hide{
+    display: none;
+}
