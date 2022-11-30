@@ -123,14 +123,14 @@ footer {
 }
 .catalog{
     margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    
     width: 1400px;
-    justify-content: space-between;
+
 }
 .catalog__elem{
-    display: flex;
     max-width: 1500px;
 }
 .catalog a:hover{
@@ -284,3 +284,5 @@ font-family: "Roboto";
     display: flex;
     justify-content: space-between;
 }
+
+

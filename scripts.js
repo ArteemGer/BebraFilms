@@ -143,12 +143,6 @@ let movies = [
 ];
 
 
-
-
-
-
-
-
 function cardtemplates() {
 	let a = [];
 	movies.forEach((element) => {
@@ -163,37 +157,6 @@ function cardtemplates() {
 				</div>
 			</div>
 		</div></a>`,
-		// 	template:`
-		// <div class="catalog__elem" id="1">
-		// 	<div class="header__elem">
-		// 		<h3>${element.name}</h3>
-		// 		<img src="${element.image}" alt="${element.name}">
-		// 		<div class="elem__raiting">
-		// 			<img src="/img/star.png" alt="star">
-		// 			<p class="raiting__score">${element.rate}.0</p>
-		// 		</div>
-		// 	</div>
-		// 		<div class="elem__property">
-		// 			<div class="elem__name">
-		// 				<h4>${element.name}</h4>
-		// 			</div>
-		// 			<div class="elem__options">
-        //             	<p>Год: ${element.year}</p>
-        //             	<p>Воз.огр.:${element.age}+</p>
-        //             	<p>Жанр: ${element.genre}</p>
-        //             	<p>Рейтинг: ${element.rate}/5</p>
-		// 			</div>
-		// 			<p class="elem__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat optio explicabo alias, at quo velit tempore cupiditate voluptates praesentium blanditiis. ipsum dolor sit amet consectetur adipisicing elit. Ea architecto illum eligendi commodi corrupti ullam quisquam explicabo fugiat adipisci hic. ipsum dolor sit amet consectetur adipisicing elit. Dolorum, pariatur. ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos blanditiis expedita sunt vel modi officia nobis nam quae nesciunt quod et suscipit nemo, mollitia temporibus aut tenetur magni provident?</p>
-		// 			<div class="elem__images">
-		// 				<div class="screnshots">
-		// 					<a href="#"><img src="${element.additImages1}" alt="${element.name}1"></a>
-		// 					<a href="#"><img src="${element.additImages2}" alt="${element.name}2"></a>
-		// 					<a href="#"><img src="${element.additImages3}" alt="${element.name}3"></a>
-		// 				</div>
-		// 				<video class="trailer" src="${element.vid}" poster="${element.poster}" controls muted></video>			
-		// 			</div>
-		// 		</div>
-		// </div>`,
 			name: element.name,
 			year: element.year,
 			age: element.age,
@@ -206,51 +169,44 @@ function cardtemplates() {
 			additImages3: element.additImages3,
 		});
 	});
+	
 	return a;
 }
 
-// if (year.value === "empty") {
-// 	cardtemplates();
-// }
-// if (genre.value === "empty") {
-// 	cardtemplates();
-// }
-// if (age.value === "empty") {
-// 	cardtemplates();
-// }
-// if (rate.value === "empty") {
-// 	cardtemplates();
-// }
-function filter(year, age, genre, rate) {
-	let bebra3 = cardtemplates().filter(
-		(value) =>
-			value.genre === genre &&
-			value.age <= age &&
-			value.rate <= rate &&
-			value.year === year
-		// if (value.genre === genre | ()) {
-		// 	if (!bebra3.includes(value)) {
-		// 		bebra3.push(value);
 
-		// 	}
-		// }
-		// if (value.age < age) {
-		// 	if (!bebra3.includes(value)) {
-		// 		bebra3.push(value);
-		// 	}
-		// }
-		// if (value.rate < rate) {
-		// 	if (!bebra3.includes(value)) {
-		// 		bebra3.push(value);
-		// 	}
-		// }
-		// if (value.year === year) {
-		// 	if (!bebra3.includes(value)) {
-		// 		bebra3.push(value);
-		// 	}
-		// }
-	);
-	return bebra3;
+function filter(year, age, genre, rate) {
+	let toFilterFilms = cardtemplates()
+	let filteredFilms = []
+	if (year){
+		console.log('year')
+		toFilterFilms = toFilterFilms.filter((i)=>{
+			console.log(i.year === year)
+			return i.year === year
+		})
+	}
+	if (rate){
+		console.log('rate')
+		toFilterFilms = toFilterFilms.filter((i)=>{
+			console.log(i.rate == rate)
+			return i.rate == rate
+		})
+	}
+	if (Number(age)+1){
+		console.log('age')
+		toFilterFilms = toFilterFilms.filter((i)=>{
+			console.log(i.age >= Number(age))
+			return i.age >= Number(age)
+		})
+	}
+	if (genre !== 'Genre'){
+		console.log('genre')
+		toFilterFilms = toFilterFilms.filter((i)=>{
+			console.log(i.genre === genre)
+			return i.genre === genre
+		})
+	}
+	console.log(filteredFilms)
+	return toFilterFilms
 }
 let catalog = document.querySelector(".catalog");
 cardtemplates().map((value) => {
@@ -280,7 +236,7 @@ bebra.map((inp) => {
 		const ageValue = document.querySelector("#age").value;
 		cardGen(
 			Number(yearValue),
-			Number(ageValue.slice(0, ageValue.length - 1)),
+			ageValue,
 			genreValue,
 			Number(raitingValue)
 		);
@@ -329,3 +285,4 @@ function myNewFunction(sel) {
 // 	});
 // }
 // filmData.forEach(item => )
+
