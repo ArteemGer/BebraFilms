@@ -89,7 +89,7 @@ function cardtemplates() {
 	let a = [];
 	movies.forEach((element) => {
 		a.push({
-			template:`<a href="#"><div class="catalog__elem" id="1">
+			template:`<a href="film.html"><div class="catalog__elem" id="1">
 			<div class="header__elem">
 				<h3>${element.name}</h3>
 				<img src="${element.image}" alt="${element.name}">

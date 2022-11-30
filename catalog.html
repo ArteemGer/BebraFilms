@@ -10,10 +10,10 @@
 	<body>
 		<div class="container">
 			<header>
-				<div class="logo">
+				<a href="index.html"><div class="logo">
 					<img src="/img/logo.png" alt="1" class="header__logo"/>
 					<p>BebraFilms</p>
-				</div>
+				</div></a>
 				<div class="btns">
 					<a href="index.html"><button class="buttons">HOME</button></a>
 					<a href="catalog.html"><button class="buttons">CATALOG</button></a>
@@ -23,34 +23,38 @@
 				<h1>Catalog</h1>
 				<form id="filter" class="main_filter">
                     <select name="year" id="year" class="filter">
-                        <option selected>2022</option>
-                        <option>2020</option>
-                        <option>2019</option>
-                        <option>2011</option>
-                        <option>2010</option>
-                        <option>2009</option>
-                        <option>2001</option>
-                        <option>1999</option>
-                        <option>1994</option>
+                        <option selected hidden value="empty">Year</option>
+                        <option value="2022">2022</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2001">2001</option>
+                        <option value="1999">1999</option>
+                        <option value="1994">1994</option>
                     </select>
-                    <select name="genre" id="genre" class="filter">
-                        <option selected>action</option>
-                        <option>drama</option>
-                        <option>fantasy</option>
-                        <option>adventure</option>
-                        <option>thriller</option>
+                    <select name="genre" id="genre" class="filter" onchange="myNewFunction(this)">
+                        <option selected hidden value="empty">Genre</option>
+                        <option value="action">Action</option>
+                        <option value="drama">Drama</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="thriller">Thriller</option>
                     </select>
                     <select name="raiting" id="raiting" class="filter">
-                        <option selected>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option selected hidden value="empty">Rate</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                     <select name="age" id="age" class="filter">
-                        <option selected>0+</option>
-                        <option>6+</option>
-                        <option>12+</option>
-                        <option>16+</option>
-                        <option>18+</option>
+                        <option selected hidden value="empty">Age</option>
+                        <option value="0">0+</option>
+                        <option value="6">6+</option>
+                        <option value="12">12+</option>
+                        <option value="16">16+</option>
+                        <option value="18">18+</option>
                     </select>
                     <button onclick="reset()" value="reset" type="reset" form="filter" class="aboba">Reset</button>
                 </form>

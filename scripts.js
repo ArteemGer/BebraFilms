@@ -142,17 +142,24 @@ let movies = [
     },
 ];
 
+
+
+
+
+
+
+
 function cardtemplates() {
 	let a = [];
 	movies.forEach((element) => {
 		a.push({
-			template:`<a href="#"><div class="catalog__elem" id="1">
+			template:`<a href="film.html"><div class="catalog__elem" id="${element.id}">
 			<div class="header__elem">
 				<h3>${element.name}</h3>
 				<img src="${element.image}" alt="${element.name}">
 				<div class="elem__raiting">
 					<img src="/img/star.png" alt="star">
-					<p class="raiting__score">${element.rate}.0</p>
+					<p class="raiting__score">${element.rate.toFixed(1)}</p>
 				</div>
 			</div>
 		</div></a>`,
@@ -201,6 +208,19 @@ function cardtemplates() {
 	});
 	return a;
 }
+
+// if (year.value === "empty") {
+// 	cardtemplates();
+// }
+// if (genre.value === "empty") {
+// 	cardtemplates();
+// }
+// if (age.value === "empty") {
+// 	cardtemplates();
+// }
+// if (rate.value === "empty") {
+// 	cardtemplates();
+// }
 function filter(year, age, genre, rate) {
 	let bebra3 = cardtemplates().filter(
 		(value) =>
@@ -258,7 +278,6 @@ bebra.map((inp) => {
 		const genreValue = document.querySelector("#genre").value;
 		const raitingValue = document.querySelector("#raiting").value;
 		const ageValue = document.querySelector("#age").value;
-		console.log(1);
 		cardGen(
 			Number(yearValue),
 			Number(ageValue.slice(0, ageValue.length - 1)),
@@ -277,3 +296,36 @@ button.addEventListener("click", () => {
 	});
 });
 
+const qwerty = document.querySelectorAll('.catalog__elem');
+// qwerty.forEach(item => {
+// 	item.addEventListener('click' function() => {
+// 		console.log(item.id)
+// 	})
+// })
+qwerty.forEach(item=>{
+	item.addEventListener('click', ()=>{
+		console.log(item.id);
+	});
+});
+// function filmtemplate(){
+// 	let b = [];
+// 	movies.
+// }
+function myNewFunction(sel) {
+	let value = sel.options[sel.selectedIndex].text;
+	movies.forEach(item => {
+		cardtemplates().filter(item => item.genre === value);
+	})
+}
+// function filtorfilm(){
+// 	filmDataCopy.classList.add()
+// 	filmData.sort(function(a,b) {
+// 		if (a.genre > b.genre){
+// 			return 1;
+// 		}
+// 		if (a.genre < b.genre){
+// 			return -1;
+// 		}
+// 	});
+// }
+// filmData.forEach(item => )
