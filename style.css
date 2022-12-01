@@ -277,3 +277,65 @@ font-family: "Roboto";
     display: flex;
     justify-content: space-between;
 }
+@media(max-width: 1024px){
+    .container{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    .catalog{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 800px;
+        gap: 20px;
+    }
+    .footer{
+        width: 800px;
+    }
+}
+@media(max-width: 768px){
+    .container{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .catalog{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 500px;
+        gap: 30px;
+    }
+    .footer{
+        width: 600px;
+    }
+    main{
+        height: 1500px;
+    }
+}
+@media(max-width: 425px){
+    .container{
+        max-width: 425px;
+        margin: 0 auto;
+    }
+    
+    .catalog{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 250px;
+        gap: 20px;
+    }
+    .footer{
+        flex-direction: column;
+        width: 400px;
+    }
+    main{
+        height: 2400px;
+    }
+    .logo p{
+        font-size: 20px;
+    }
+    .buttons{
+        width: 100px;
+    }
+    .btns{
+        flex-direction: column;
+    }
+}
